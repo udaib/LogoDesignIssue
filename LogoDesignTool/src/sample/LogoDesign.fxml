@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+  <children>
+    <MenuBar prefHeight="35.0" prefWidth="800.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+                  <MenuItem mnemonicParsing="false" text="Upload Media" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#CloseApp" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About LogoDesign Tool" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="388.0" prefWidth="682.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <ImageView fx:id="imageView" fitHeight="335.0" fitWidth="617.0" layoutX="137.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="68.0" />
+            <Button fx:id="selectImageBtn" layoutX="5.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectImageBtnAction" prefHeight="25.0" prefWidth="113.0" text="Select Image" />
+            <Button fx:id="loadLogoBtn" layoutX="5.0" layoutY="55.0" mnemonicParsing="false" onAction="#loadLogo" prefHeight="25.0" prefWidth="113.0" text="Load Logo" />
+            <CheckBox fx:id="applyEdge" layoutX="155.0" layoutY="14.0" mnemonicParsing="false" onAction="#cannySelected" prefHeight="18.0" prefWidth="161.0" text="Detect Curve with edges" />
+            <Slider fx:id="cannyThreshold" layoutX="455.0" layoutY="14.0" onMouseDragOver="#onSliderAction" />
+            <Label layoutX="335.0" layoutY="15.0" prefHeight="15.0" prefWidth="113.0" text="Canny Threshold" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
